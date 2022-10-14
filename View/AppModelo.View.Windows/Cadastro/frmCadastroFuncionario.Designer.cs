@@ -372,6 +372,7 @@
             this.btnPesquisarCep.TabIndex = 5;
             this.btnPesquisarCep.Text = "Pesquisar";
             this.btnPesquisarCep.UseVisualStyleBackColor = true;
+            this.btnPesquisarCep.Click += new System.EventHandler(this.btnPesquisarCep_Click);
             // 
             // cmbNacionalidade
             // 
