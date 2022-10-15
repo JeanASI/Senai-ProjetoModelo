@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,7 +67,9 @@
             this.cmbNaturalidade = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -124,15 +127,16 @@
             this.txtNome.Size = new System.Drawing.Size(238, 27);
             this.txtNome.TabIndex = 2;
             this.txtNome.Tag = "Obrigatorio";
+            this.txtNome.Validating += new System.ComponentModel.CancelEventHandler(this.txtNome_Validating);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(327, 116);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 20);
+            this.label4.Size = new System.Drawing.Size(130, 20);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Data Nascimento";
+            this.label4.Text = "Data Nascimento*";
             // 
             // label5
             // 
@@ -151,6 +155,7 @@
             this.txtCpf.Size = new System.Drawing.Size(130, 27);
             this.txtCpf.TabIndex = 3;
             this.txtCpf.Tag = "Obrigatorio";
+            this.txtCpf.Validating += new System.ComponentModel.CancelEventHandler(this.txtCpf_Validating);
             // 
             // txtDataNascimento
             // 
@@ -161,6 +166,7 @@
             this.txtDataNascimento.TabIndex = 3;
             this.txtDataNascimento.Tag = "Obrigatorio";
             this.txtDataNascimento.ValidatingType = typeof(System.DateTime);
+            this.txtDataNascimento.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtDataNascimento_MaskInputRejected);
             // 
             // label6
             // 
@@ -409,6 +415,10 @@
             this.label18.TabIndex = 1;
             this.label18.Text = "Nacionalidade";
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // frmCadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -458,6 +468,7 @@
             this.Text = "frmCadastroFuncionario";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -503,5 +514,6 @@
         private System.Windows.Forms.ComboBox cmbNaturalidade;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
