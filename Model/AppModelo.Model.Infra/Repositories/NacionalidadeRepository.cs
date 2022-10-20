@@ -32,14 +32,14 @@ namespace AppModelo.Model.Infra.Repositories
         }
         public IEnumerable<NacionalidadeEntity> ObterTodos() 
         {
-            var sql = "SELECT * FROM nacionalidade";
+            var sql = "SELECT id,descricao FROM nacionalidade ORDER BY descricao ASC";
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
             
             var resultado = conexaoBd.Query<NacionalidadeEntity>(sql);
 
             return resultado;
         }
-        public NacionalidadeEntity ObterPorId() 
+        public NacionalidadeEntity ObterPorId()
         {
             return new NacionalidadeEntity();
         }

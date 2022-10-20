@@ -80,7 +80,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(760, 97);
+            this.panel1.Size = new System.Drawing.Size(856, 97);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -114,7 +114,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(83, 116);
+            this.label3.Location = new System.Drawing.Point(103, 116);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 20);
             this.label3.TabIndex = 1;
@@ -122,7 +122,7 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(87, 139);
+            this.txtNome.Location = new System.Drawing.Point(107, 139);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(238, 27);
             this.txtNome.TabIndex = 2;
@@ -132,7 +132,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(327, 116);
+            this.label4.Location = new System.Drawing.Point(393, 116);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 20);
             this.label4.TabIndex = 1;
@@ -141,7 +141,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(607, 116);
+            this.label5.Location = new System.Drawing.Point(695, 116);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 20);
             this.label5.TabIndex = 1;
@@ -149,7 +149,7 @@
             // 
             // txtCpf
             // 
-            this.txtCpf.Location = new System.Drawing.Point(611, 139);
+            this.txtCpf.Location = new System.Drawing.Point(699, 139);
             this.txtCpf.Mask = "###.###.###-##";
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(130, 27);
@@ -159,7 +159,7 @@
             // 
             // txtDataNascimento
             // 
-            this.txtDataNascimento.Location = new System.Drawing.Point(331, 139);
+            this.txtDataNascimento.Location = new System.Drawing.Point(397, 139);
             this.txtDataNascimento.Mask = "00/00/0000";
             this.txtDataNascimento.Name = "txtDataNascimento";
             this.txtDataNascimento.Size = new System.Drawing.Size(137, 27);
@@ -188,7 +188,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(281, 242);
+            this.label7.Location = new System.Drawing.Point(313, 242);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(65, 20);
             this.label7.TabIndex = 1;
@@ -196,7 +196,7 @@
             // 
             // txtTelefone
             // 
-            this.txtTelefone.Location = new System.Drawing.Point(285, 265);
+            this.txtTelefone.Location = new System.Drawing.Point(317, 265);
             this.txtTelefone.Mask = "(##) ####-####";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(171, 27);
@@ -316,7 +316,7 @@
             // rbMasculino
             // 
             this.rbMasculino.AutoSize = true;
-            this.rbMasculino.Location = new System.Drawing.Point(498, 135);
+            this.rbMasculino.Location = new System.Drawing.Point(578, 135);
             this.rbMasculino.Name = "rbMasculino";
             this.rbMasculino.Size = new System.Drawing.Size(94, 24);
             this.rbMasculino.TabIndex = 4;
@@ -327,7 +327,7 @@
             // rbFeminino
             // 
             this.rbFeminino.AutoSize = true;
-            this.rbFeminino.Location = new System.Drawing.Point(498, 165);
+            this.rbFeminino.Location = new System.Drawing.Point(578, 165);
             this.rbFeminino.Name = "rbFeminino";
             this.rbFeminino.Size = new System.Drawing.Size(87, 24);
             this.rbFeminino.TabIndex = 4;
@@ -338,7 +338,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(482, 116);
+            this.label15.Location = new System.Drawing.Point(562, 116);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(41, 20);
             this.label15.TabIndex = 1;
@@ -347,7 +347,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(465, 242);
+            this.label16.Location = new System.Drawing.Point(522, 242);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(120, 20);
             this.label16.TabIndex = 1;
@@ -355,7 +355,7 @@
             // 
             // txtTelefoneContato
             // 
-            this.txtTelefoneContato.Location = new System.Drawing.Point(469, 265);
+            this.txtTelefoneContato.Location = new System.Drawing.Point(526, 265);
             this.txtTelefoneContato.Mask = "(##) ####-####";
             this.txtTelefoneContato.Name = "txtTelefoneContato";
             this.txtTelefoneContato.Size = new System.Drawing.Size(171, 27);
@@ -424,7 +424,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(760, 503);
+            this.ClientSize = new System.Drawing.Size(856, 503);
             this.Controls.Add(this.cmbNaturalidade);
             this.Controls.Add(this.cmbNacionalidade);
             this.Controls.Add(this.btnPesquisarCep);
