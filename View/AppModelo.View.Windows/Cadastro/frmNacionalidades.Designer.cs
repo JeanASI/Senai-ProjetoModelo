@@ -105,7 +105,7 @@
             this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(494, 142);
+            this.panel1.Size = new System.Drawing.Size(494, 126);
             this.panel1.TabIndex = 4;
             // 
             // frmNacionalidades
