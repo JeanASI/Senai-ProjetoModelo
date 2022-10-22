@@ -3,13 +3,7 @@ using AppModelo.Controller.External;
 using AppModelo.Model.Domain.Validators;
 using AppModelo.View.Windows.Helpers;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppModelo.View.Windows.Cadastro
@@ -23,12 +17,7 @@ namespace AppModelo.View.Windows.Cadastro
             Componentes.FormatarCamposObrigatorios(this);
             cmbNacionalidade.DataSource = _nacionalidadeController.ObterTodasNacionalidades();
             cmbNacionalidade.DisplayMember = "Descricao";
-
-        
-        
         }
-
-
 
         private void btnPesquisarCep_Click(object sender, EventArgs e)
         {

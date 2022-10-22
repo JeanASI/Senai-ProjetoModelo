@@ -22,7 +22,7 @@ namespace AppModelo.Model.Infra.Repositories
             var resultado = conexaoBd.Execute(sql);
             return resultado > 0;
         }
-        public bool Atualizar() 
+        public bool Atualizar()
         {
             return false;
         }
