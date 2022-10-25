@@ -1,6 +1,7 @@
 ﻿using AppModelo.Model.Domain.Entities;
 using Dapper;
 using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Data;
 
@@ -23,9 +24,9 @@ namespace AppModelo.Model.Infra.Repositories
         {
             return false;
         }
-        public IEnumerable<NaturalidadeEntity> ObterTodos()
+        public IEnumerable<NaturalidadeEntity> ObterTodosAtivos()
         {
-            var sql = "SELECT id,descricao FROM naturalidade ORDER BY descricao ASC";
+            var sql = "SELECT id,descricao FROM naturalidade WHERE ativo = true";
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
 
             var resultado = conexaoBd.Query<NaturalidadeEntity>(sql);
@@ -35,6 +36,11 @@ namespace AppModelo.Model.Infra.Repositories
         public NaturalidadeEntity ObterPorId()
         {
             return new NaturalidadeEntity();
+        }
+
+        public object ObterPorDescricao(string descricao)
+        {
+            throw new NotImplementedException();
         }
     }
 }
