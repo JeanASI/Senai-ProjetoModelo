@@ -10,23 +10,25 @@ namespace AppModelo.View.Windows.Cadastro
         public frmNaturalidade()
         {
             InitializeComponent();
-            var listaDeNaturalidade = _naturalidadeController.ObterTodasNacionalidades();
+            var listaDeNaturalidade = _naturalidadeController.ObterTodasNaturalidades();
             gvNaturalidade.DataSource = listaDeNaturalidade;
         }
 
         private void btnSalvarNaturalidade_Click(object sender, EventArgs e)
         {
-            var salvou = _naturalidadeController.Cadastrar(txtDescricao.Text);
-            if (salvou)
+            var temNumero = Helpers.Componentes.ExisteNumeroNoTexto(txtDescricao.Text);
+            if(temNumero)
             {
-                MessageBox.Show("Nacionalidade incluida com sucesso");
-                txtDescricao.Text = String.Empty;
+                errorProvider1.SetError(txtDescricao, "Naturalidade geralmente não tem número");
+                txtDescricao.Focus();
+                return;
+            }
 
-            }
-            else
-            {
-                MessageBox.Show("Houve um erro ao salvar no banco de dados");
-            }
+            var controller = new NaturalidadeController();
+            var descricaoMaiuscula = txtDescricao.Text.ToUpper();
+
+            var resposta = controller.Cadastrar(descricaoMaiuscula, chkBox.Checked);
+            
         }
     }
 }

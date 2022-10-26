@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -41,7 +42,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(57, 121);
+            this.label1.Location = new System.Drawing.Point(54, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
@@ -51,7 +52,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(54, 186);
+            this.label2.Location = new System.Drawing.Point(51, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 0;
@@ -59,14 +60,14 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(57, 149);
+            this.txtEmail.Location = new System.Drawing.Point(54, 36);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(240, 20);
             this.txtEmail.TabIndex = 1;
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(57, 210);
+            this.txtSenha.Location = new System.Drawing.Point(54, 97);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(240, 20);
             this.txtSenha.TabIndex = 1;
@@ -76,7 +77,7 @@
             this.lblEsqueciMinhaSenha.AutoSize = true;
             this.lblEsqueciMinhaSenha.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblEsqueciMinhaSenha.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblEsqueciMinhaSenha.Location = new System.Drawing.Point(189, 243);
+            this.lblEsqueciMinhaSenha.Location = new System.Drawing.Point(186, 130);
             this.lblEsqueciMinhaSenha.Name = "lblEsqueciMinhaSenha";
             this.lblEsqueciMinhaSenha.Size = new System.Drawing.Size(108, 13);
             this.lblEsqueciMinhaSenha.TabIndex = 2;
@@ -85,7 +86,7 @@
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Location = new System.Drawing.Point(57, 296);
+            this.btnEntrar.Location = new System.Drawing.Point(57, 248);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(240, 35);
             this.btnEntrar.TabIndex = 3;
@@ -97,7 +98,7 @@
             // 
             this.lblSuporteContato.AutoSize = true;
             this.lblSuporteContato.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblSuporteContato.Location = new System.Drawing.Point(138, 344);
+            this.lblSuporteContato.Location = new System.Drawing.Point(138, 296);
             this.lblSuporteContato.Name = "lblSuporteContato";
             this.lblSuporteContato.Size = new System.Drawing.Size(93, 13);
             this.lblSuporteContato.TabIndex = 4;
@@ -108,7 +109,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(369, 364);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(369, 383);
             this.Controls.Add(this.lblSuporteContato);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.lblEsqueciMinhaSenha);
@@ -116,6 +119,8 @@
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
             this.Text = "frmLogin";
             this.ResumeLayout(false);

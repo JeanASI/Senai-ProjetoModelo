@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
@@ -36,8 +37,10 @@
             this.btnSalvarNaturalidade = new System.Windows.Forms.Button();
             this.chkBox = new System.Windows.Forms.CheckBox();
             this.gvNaturalidade = new System.Windows.Forms.DataGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtId
@@ -65,7 +68,7 @@
             this.txtDescricao.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtDescricao.Location = new System.Drawing.Point(12, 92);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(281, 20);
+            this.txtDescricao.Size = new System.Drawing.Size(236, 20);
             this.txtDescricao.TabIndex = 1;
             // 
             // label2
@@ -110,6 +113,8 @@
             // chkBox
             // 
             this.chkBox.AutoSize = true;
+            this.chkBox.Checked = true;
+            this.chkBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.chkBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.chkBox.Location = new System.Drawing.Point(150, 37);
@@ -128,6 +133,10 @@
             this.gvNaturalidade.Size = new System.Drawing.Size(407, 247);
             this.gvNaturalidade.TabIndex = 6;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmNaturalidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -141,6 +150,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -154,5 +164,6 @@
         private System.Windows.Forms.CheckBox chkBox;
         private System.Windows.Forms.DataGridView gvNaturalidade;
         private System.Windows.Forms.Button btnSalvarNaturalidade;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
