@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AppModelo.Controller.Segurança;
+using AppModelo.Model.Domain.Validators;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,9 +21,26 @@ namespace AppModelo.View.Windows
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            var form = new frmPrincipal();
-            form.Show();
-            this.Hide();
+            var emailEhValido = Validadores.EmailEValido(txtEmail.Text);
+            if(emailEhValido is false)
+            {
+                errorProvider1.SetError(txtEmail, "Seu e-mail está errado");
+                txtEmail.Focus();
+                return;
+            }
+
+            var controller = new UsuarioController();
+            var usuarioEncontrodo = controller.EfetuarLogin(txtEmail.Text, txtSenha.Text);
+            if(usuarioEncontrodo)
+            {
+                var form = new frmPrincipal();
+                form.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Usuario ou senha não encontrado");
+            }
         }
 
         private void lblEsqueciMinhaSenha_Click(object sender, EventArgs e)
