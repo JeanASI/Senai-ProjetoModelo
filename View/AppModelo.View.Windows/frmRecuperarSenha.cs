@@ -1,4 +1,5 @@
-﻿using AppModelo.Model.Domain.Validators;
+﻿using AppModelo.Controller.Segurança;
+using AppModelo.Model.Domain.Validators;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,8 +26,11 @@ namespace AppModelo.View.Windows
             {
                 errorProvider1.SetError(txtEmailRecuperarSenha, "Seu e-mail está errado");
                 txtEmailRecuperarSenha.Focus();
-                return;             
+                return;
             }
+            var controller = new UsuarioController();
+            var resultado = controller.RecuperarSenha(txtEmailRecuperarSenha.Text);
+            MessageBox.Show(resultado);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
