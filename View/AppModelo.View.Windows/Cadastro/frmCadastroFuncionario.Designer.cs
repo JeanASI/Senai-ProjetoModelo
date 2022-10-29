@@ -68,6 +68,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnSalvarFuncionario = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
@@ -75,6 +76,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Chocolate;
+            this.panel1.Controls.Add(this.btnSalvarFuncionario);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -419,12 +421,22 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
+            // btnSalvarFuncionario
+            // 
+            this.btnSalvarFuncionario.Location = new System.Drawing.Point(772, 23);
+            this.btnSalvarFuncionario.Name = "btnSalvarFuncionario";
+            this.btnSalvarFuncionario.Size = new System.Drawing.Size(57, 39);
+            this.btnSalvarFuncionario.TabIndex = 2;
+            this.btnSalvarFuncionario.Text = "Salvar";
+            this.btnSalvarFuncionario.UseVisualStyleBackColor = true;
+            this.btnSalvarFuncionario.Click += new System.EventHandler(this.btnSalvarFuncionario_Click);
+            // 
             // frmCadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(856, 503);
+            this.ClientSize = new System.Drawing.Size(856, 533);
             this.Controls.Add(this.cmbNaturalidade);
             this.Controls.Add(this.cmbNacionalidade);
             this.Controls.Add(this.btnPesquisarCep);
@@ -515,5 +527,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.Button btnSalvarFuncionario;
     }
 }

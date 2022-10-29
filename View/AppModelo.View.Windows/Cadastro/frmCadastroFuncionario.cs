@@ -1,9 +1,12 @@
 ﻿using AppModelo.Controller.Cadastros;
 using AppModelo.Controller.External;
+using AppModelo.Model.Domain.Entities;
 using AppModelo.Model.Domain.Validators;
 using AppModelo.View.Windows.Helpers;
 using System;
 using System.ComponentModel;
+using System.Data.SqlClient;
+using System.Data;
 using System.Windows.Forms;
 
 namespace AppModelo.View.Windows.Cadastro
@@ -32,10 +35,10 @@ namespace AppModelo.View.Windows.Cadastro
         {
             var cpf = txtCpf.Text;
             var cpfEhvalido = Validadores.ValidarCPF(cpf);
-            if(cpfEhvalido is false)
+            if (cpfEhvalido is false)
             {
                 errorProvider.SetError(txtCpf, "CPF Invalido");
-                return ;
+                return;
             }
             errorProvider.Clear();
         }
@@ -65,5 +68,13 @@ namespace AppModelo.View.Windows.Cadastro
         {
             var dataNascimento = DateTime.Parse(txtDataNascimento.Text);
         }
+
+        private void btnSalvarFuncionario_Click(object sender, EventArgs e)
+
+
+
+        
+
     }
 }
+
