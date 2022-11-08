@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSalvarFuncionario = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -68,7 +69,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnSalvarFuncionario = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
@@ -82,8 +82,19 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(856, 97);
+            this.panel1.Size = new System.Drawing.Size(853, 97);
             this.panel1.TabIndex = 0;
+            // 
+            // btnSalvarFuncionario
+            // 
+            this.btnSalvarFuncionario.BackColor = System.Drawing.Color.LightCoral;
+            this.btnSalvarFuncionario.Location = new System.Drawing.Point(787, 12);
+            this.btnSalvarFuncionario.Name = "btnSalvarFuncionario";
+            this.btnSalvarFuncionario.Size = new System.Drawing.Size(57, 39);
+            this.btnSalvarFuncionario.TabIndex = 2;
+            this.btnSalvarFuncionario.Text = "Salvar";
+            this.btnSalvarFuncionario.UseVisualStyleBackColor = false;
+            this.btnSalvarFuncionario.Click += new System.EventHandler(this.btnSalvarFuncionario_Click);
             // 
             // label1
             // 
@@ -421,22 +432,12 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
-            // btnSalvarFuncionario
-            // 
-            this.btnSalvarFuncionario.Location = new System.Drawing.Point(772, 23);
-            this.btnSalvarFuncionario.Name = "btnSalvarFuncionario";
-            this.btnSalvarFuncionario.Size = new System.Drawing.Size(57, 39);
-            this.btnSalvarFuncionario.TabIndex = 2;
-            this.btnSalvarFuncionario.Text = "Salvar";
-            this.btnSalvarFuncionario.UseVisualStyleBackColor = true;
-            this.btnSalvarFuncionario.Click += new System.EventHandler(this.btnSalvarFuncionario_Click);
-            // 
             // frmCadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(856, 533);
+            this.ClientSize = new System.Drawing.Size(853, 488);
             this.Controls.Add(this.cmbNaturalidade);
             this.Controls.Add(this.cmbNacionalidade);
             this.Controls.Add(this.btnPesquisarCep);
