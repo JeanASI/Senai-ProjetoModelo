@@ -17,7 +17,7 @@ namespace AppModelo.Model.Domain.Entities
         public int naturalidade { get; set; }
         public string email { get; set; }
         public string telefone { get; set; }
-        public string telefone_Contato { get; set; }
+        public string telefone_contato { get; set; }
         public string cep { get; set; }
         public string logradouro { get; set; }
         public int numero { get; set; }

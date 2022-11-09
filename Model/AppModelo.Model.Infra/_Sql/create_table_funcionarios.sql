@@ -1,0 +1,21 @@
+﻿CREATE TABLE funcionarios (
+ id int PRIMARY KEY AUTO_INCREMENT not null,
+ nome  VARCHAR(100) not null,
+ data_de_aniversario  DATE null,
+ cpf varchar(50) not null,
+ sexo BOOL not null,
+ nacionalidade int not null,
+ naturalidade int not null,
+ email varchar(50) not null,
+ telefone varchar(50) not null,
+ telefone_contato varchar(50) not null,
+ cep varchar(50) not null,
+ logradouro varchar(50) not null,
+ numero int not null,
+ complemento varchar(50) not null,
+ bairro varchar(50) not null,
+ municipio varchar(50) not null,
+ uf varchar(2) not null,
+ FOREIGN KEY(nacionalidade) references nacionalidade(id),
+ FOREIGN KEY(naturalidade) references naturalidade(id)
+);
