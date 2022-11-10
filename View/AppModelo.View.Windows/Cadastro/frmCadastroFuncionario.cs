@@ -8,12 +8,16 @@ using System.ComponentModel;
 using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
+using static AppModelo.Model.Domain.Validators.Validadores;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Runtime.ConstrainedExecution;
 
 namespace AppModelo.View.Windows.Cadastro
 {
     public partial class frmCadastroFuncionario : Form
     {
         private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
+
         public frmCadastroFuncionario()
         {
             InitializeComponent();
@@ -70,11 +74,21 @@ namespace AppModelo.View.Windows.Cadastro
         }
 
         private void btnSalvarFuncionario_Click(object sender, EventArgs e)
+        {
+            var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
+            int numero = int.Parse(txtEnderecoNumero.Text);
 
+            var salvou = _funcionarioController.Cadastrar(txtNome.Text, dataNascimento, rbMasculino.Checked, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text, 1, 1);
 
-
-        
-
+            if ((bool)salvou)
+            {
+                MessageBox.Show("Cadastrado com sucesso");
+            }
+            else
+            {
+                MessageBox.Show("Erro ao cadastrar usuário");
+            }
+        }
     }
 }
 
