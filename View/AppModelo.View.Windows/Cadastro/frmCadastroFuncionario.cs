@@ -17,13 +17,16 @@ namespace AppModelo.View.Windows.Cadastro
     public partial class frmCadastroFuncionario : Form
     {
         private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
-
+        private FuncionarioController _funcionarioController = new FuncionarioController();
+        private NaturalidadeController _naturalidadeController = new NaturalidadeController();
         public frmCadastroFuncionario()
         {
             InitializeComponent();
             Componentes.FormatarCamposObrigatorios(this);
             cmbNacionalidade.DataSource = _nacionalidadeController.ObterTodasNacionalidades();
             cmbNacionalidade.DisplayMember = "Descricao";
+            cmbNaturalidade.DataSource = _naturalidadeController.ObterTodasNaturalidades();
+            cmbNaturalidade.DisplayMember = "Descricao";
         }
 
         private void btnPesquisarCep_Click(object sender, EventArgs e)
@@ -33,6 +36,7 @@ namespace AppModelo.View.Windows.Cadastro
             txtEnderecoBairro.Text = endereco.Bairro;
             txtEnderecoLogradouro.Text = endereco.Logradouro;
             txtEnderecoMunicipio.Text = endereco.Localidade;
+            txtEnderecoUf.Text = endereco.Uf;
         }
 
         private void txtCpf_Validating(object sender, CancelEventArgs e)
@@ -78,7 +82,7 @@ namespace AppModelo.View.Windows.Cadastro
             var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
             int numero = int.Parse(txtEnderecoNumero.Text);
 
-            var salvou = _funcionarioController.Cadastrar(txtNome.Text, dataNascimento, rbMasculino.Checked, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text, 1, 1);
+            var salvou = _funcionarioController.Cadastrar(txtNome.Text, dataNascimento, txtCpf.Text, rbMasculino.Checked, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text, 1, 1);
 
             if ((bool)salvou)
             {
