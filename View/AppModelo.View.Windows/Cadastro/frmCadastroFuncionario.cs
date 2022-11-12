@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using static AppModelo.Model.Domain.Validators.Validadores;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Runtime.ConstrainedExecution;
+using System.Drawing;
 
 namespace AppModelo.View.Windows.Cadastro
 {
@@ -25,8 +26,11 @@ namespace AppModelo.View.Windows.Cadastro
             Componentes.FormatarCamposObrigatorios(this);
             cmbNacionalidade.DataSource = _nacionalidadeController.ObterTodasNacionalidades();
             cmbNacionalidade.DisplayMember = "Descricao";
+            cmbNacionalidade.ValueMember = "id";
+
             cmbNaturalidade.DataSource = _naturalidadeController.ObterTodasNaturalidades();
             cmbNaturalidade.DisplayMember = "Descricao";
+            cmbNaturalidade.ValueMember = "id";
         }
 
         private void btnPesquisarCep_Click(object sender, EventArgs e)
@@ -81,12 +85,21 @@ namespace AppModelo.View.Windows.Cadastro
         {
             var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
             int numero = int.Parse(txtEnderecoNumero.Text);
+            var obterNacionalidade = cmbNacionalidade.SelectedValue;
+            var obterNaturalidade = cmbNaturalidade.SelectedValue;
 
-            var salvou = _funcionarioController.Cadastrar(txtNome.Text, dataNascimento, txtCpf.Text, rbMasculino.Checked, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text, 1, 1);
+            var nacionalidade = Convert.ToInt32(obterNacionalidade);
+            var naturalidade = Convert.ToInt32(obterNaturalidade);
+
+
+            var salvou = _funcionarioController.Cadastrar(txtNome.Text, dataNascimento, txtCpf.Text, rbMasculino.Checked, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text, nacionalidade, naturalidade);
 
             if ((bool)salvou)
             {
                 MessageBox.Show("Cadastrado com sucesso");
+                
+
+                
             }
             else
             {

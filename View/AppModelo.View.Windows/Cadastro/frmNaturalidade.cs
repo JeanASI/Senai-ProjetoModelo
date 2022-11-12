@@ -28,7 +28,8 @@ namespace AppModelo.View.Windows.Cadastro
             var descricaoMaiuscula = txtDescricao.Text.ToUpper();
 
             var resposta = controller.Cadastrar(descricaoMaiuscula, chkBox.Checked);
-            
+            MessageBox.Show("Inserido com sucesso!");
+
         }
     }
 }
