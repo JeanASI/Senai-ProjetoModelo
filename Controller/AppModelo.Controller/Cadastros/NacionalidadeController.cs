@@ -19,6 +19,12 @@ namespace AppModelo.Controller.Cadastros
             var resposta = repositorio.ObterTodos();
             return (List<NacionalidadeEntity>)resposta;
         }
-        
+        public bool Deletar(int id)
+        {
+            var repositorio = new NacionalidadeRepository();
+            var resposta = repositorio.Remover(id);
+            return resposta;
+        }
+
     }
 }

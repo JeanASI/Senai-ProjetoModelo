@@ -30,9 +30,17 @@ namespace AppModelo.Model.Infra.Repositories
         { 
             return false;
         }
+
+        public bool Remover(int id)
+        {
+            var sql = $"DELETE FROM nacionalidade WHERE id = '{id}'";
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
+            var resultado = conexaoBd.Execute(sql);
+            return resultado > 0;
+        }
         public IEnumerable<NacionalidadeEntity> ObterTodos() 
         {
-            var sql = "SELECT id,descricao FROM nacionalidade ORDER BY descricao ASC";
+            var sql = "SELECT id,descricao FROM nacionalidade";
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
             
             var resultado = conexaoBd.Query<NacionalidadeEntity>(sql);

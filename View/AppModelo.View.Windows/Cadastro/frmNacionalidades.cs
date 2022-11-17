@@ -18,6 +18,12 @@ namespace AppModelo.View.Windows.Cadastro
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            if (txtDescricao.Text == "")
+            {
+                MessageBox.Show("O campo descrição é obrigatório!");
+                txtDescricao.Focus();
+                return;
+            }
             var temNumero = Helpers.Componentes.ExisteNumeroNoTexto(txtDescricao.Text);
             if (temNumero)
             {
@@ -40,6 +46,22 @@ namespace AppModelo.View.Windows.Cadastro
             var listaNacionalidade = _nacionalidadeController.ObterTodasNacionalidades();
             gvNacionalidades.DataSource = listaNacionalidade;
             MessageBox.Show("Atualizado com sucesso!");
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txtId.Text);
+            var deletou = _nacionalidadeController.Deletar(id);
+            if (deletou)
+            {
+                MessageBox.Show("Nacionalidade deletado com sucesso!", "Nacionalidade deletada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                gvNacionalidades.DataSource = _nacionalidadeController.ObterTodasNacionalidades();
+            }
+            else
+            {
+                MessageBox.Show("Ocorreu um erro ao deletar uma nacionalidade", "Nacionalidade não deletada", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }
