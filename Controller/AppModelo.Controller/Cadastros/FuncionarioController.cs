@@ -6,6 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+{
+
+}
+
 namespace AppModelo.Controller.Cadastros
 {
     public class FuncionarioController
@@ -15,6 +19,12 @@ namespace AppModelo.Controller.Cadastros
             var repositorio = new FuncionarioRepository();
             var resposta = repositorio.Inserir(nome, dataAniversario, cpf, sexo, nacionalidade, naturalidade, email, telefone, telefone_contato, cep, logradouro, numero, complemento, bairro, municipio, uf);
             return resposta;
+        }
+        public List<FuncionarioEntity> ObterTodasFuncionarios()
+        {
+            var repositorio = new FuncionarioRepository();
+            var resposta = repositorio.ObterTodosFuncionarios();
+            return (List<FuncionarioEntity>)resposta;
         }
     }
 }

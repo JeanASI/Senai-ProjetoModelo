@@ -38,6 +38,8 @@
             this.chkBox = new System.Windows.Forms.CheckBox();
             this.gvNaturalidade = new System.Windows.Forms.DataGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -66,9 +68,9 @@
             // txtDescricao
             // 
             this.txtDescricao.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtDescricao.Location = new System.Drawing.Point(12, 92);
+            this.txtDescricao.Location = new System.Drawing.Point(16, 92);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(236, 20);
+            this.txtDescricao.Size = new System.Drawing.Size(287, 20);
             this.txtDescricao.TabIndex = 1;
             // 
             // label2
@@ -85,6 +87,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Chocolate;
+            this.panel1.Controls.Add(this.btnAtualizar);
+            this.panel1.Controls.Add(this.btnExcluir);
             this.panel1.Controls.Add(this.btnSalvarNaturalidade);
             this.panel1.Controls.Add(this.txtDescricao);
             this.panel1.Controls.Add(this.label1);
@@ -95,14 +99,14 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(431, 127);
+            this.panel1.Size = new System.Drawing.Size(432, 127);
             this.panel1.TabIndex = 4;
             // 
             // btnSalvarNaturalidade
             // 
             this.btnSalvarNaturalidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvarNaturalidade.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btnSalvarNaturalidade.Location = new System.Drawing.Point(299, 89);
+            this.btnSalvarNaturalidade.ForeColor = System.Drawing.Color.Black;
+            this.btnSalvarNaturalidade.Location = new System.Drawing.Point(339, 91);
             this.btnSalvarNaturalidade.Name = "btnSalvarNaturalidade";
             this.btnSalvarNaturalidade.Size = new System.Drawing.Size(75, 23);
             this.btnSalvarNaturalidade.TabIndex = 7;
@@ -137,12 +141,36 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.ForeColor = System.Drawing.Color.Black;
+            this.btnExcluir.Location = new System.Drawing.Point(339, 54);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.TabIndex = 8;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.ForeColor = System.Drawing.Color.Black;
+            this.btnAtualizar.Location = new System.Drawing.Point(339, 18);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(75, 23);
+            this.btnAtualizar.TabIndex = 8;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
             // frmNaturalidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(431, 397);
+            this.ClientSize = new System.Drawing.Size(432, 397);
             this.Controls.Add(this.gvNaturalidade);
             this.Controls.Add(this.panel1);
             this.Name = "frmNaturalidade";
@@ -165,5 +193,7 @@
         private System.Windows.Forms.DataGridView gvNaturalidade;
         private System.Windows.Forms.Button btnSalvarNaturalidade;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button btnAtualizar;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }

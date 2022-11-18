@@ -1,4 +1,5 @@
 ﻿using AppModelo.View.Windows.Cadastro;
+using AppModelo.View.Windows.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,6 +34,12 @@ namespace AppModelo.View.Windows
         private void cadastrarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             var form = new frmNaturalidade();
+            form.Show();
+        }
+
+        private void excluirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new frmExcluirFuncionario();
             form.Show();
         }
     }
