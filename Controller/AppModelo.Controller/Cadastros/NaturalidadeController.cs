@@ -24,5 +24,11 @@ namespace AppModelo.Controller.Cadastros
             var resposta = repositorio.ObterTodos();
             return (List<NaturalidadeEntity>)resposta;
         }
+        public bool Deletar(int id)
+        {
+            var repositorio = new NaturalidadeRepository();
+            var resposta = repositorio.Remover(id);
+            return resposta;
+        }
     }
 }

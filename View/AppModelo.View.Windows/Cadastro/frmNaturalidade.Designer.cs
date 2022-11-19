@@ -38,6 +38,8 @@
             this.chkBox = new System.Windows.Forms.CheckBox();
             this.gvNaturalidade = new System.Windows.Forms.DataGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -84,7 +86,9 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Chocolate;
+            this.panel1.BackColor = System.Drawing.Color.LightSlateGray;
+            this.panel1.Controls.Add(this.btnAtualizar);
+            this.panel1.Controls.Add(this.btnExcluir);
             this.panel1.Controls.Add(this.btnSalvarNaturalidade);
             this.panel1.Controls.Add(this.txtDescricao);
             this.panel1.Controls.Add(this.label1);
@@ -100,14 +104,15 @@
             // 
             // btnSalvarNaturalidade
             // 
+            this.btnSalvarNaturalidade.BackColor = System.Drawing.Color.GreenYellow;
             this.btnSalvarNaturalidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvarNaturalidade.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btnSalvarNaturalidade.Location = new System.Drawing.Point(299, 89);
+            this.btnSalvarNaturalidade.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btnSalvarNaturalidade.Location = new System.Drawing.Point(254, 89);
             this.btnSalvarNaturalidade.Name = "btnSalvarNaturalidade";
             this.btnSalvarNaturalidade.Size = new System.Drawing.Size(75, 23);
             this.btnSalvarNaturalidade.TabIndex = 7;
             this.btnSalvarNaturalidade.Text = "Salvar";
-            this.btnSalvarNaturalidade.UseVisualStyleBackColor = true;
+            this.btnSalvarNaturalidade.UseVisualStyleBackColor = false;
             this.btnSalvarNaturalidade.Click += new System.EventHandler(this.btnSalvarNaturalidade_Click);
             // 
             // chkBox
@@ -137,6 +142,30 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.BackColor = System.Drawing.Color.LightCoral;
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Location = new System.Drawing.Point(254, 60);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.TabIndex = 8;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.BackColor = System.Drawing.Color.Turquoise;
+            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Location = new System.Drawing.Point(254, 31);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(75, 23);
+            this.btnAtualizar.TabIndex = 8;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
             // frmNaturalidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -165,5 +194,7 @@
         private System.Windows.Forms.DataGridView gvNaturalidade;
         private System.Windows.Forms.Button btnSalvarNaturalidade;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button btnAtualizar;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }

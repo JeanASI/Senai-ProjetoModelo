@@ -22,5 +22,14 @@ namespace AppModelo.Model.Infra.Repositories
 
             return resultado > 0;
         }
+        public IEnumerable<FuncionarioEntity> ObterTodos()
+        {
+            var sql = "SELECT * FROM funcionarios";
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
+
+            var resultado = conexaoBd.Query<FuncionarioEntity>(sql);
+
+            return resultado;
+        }
     }
 }

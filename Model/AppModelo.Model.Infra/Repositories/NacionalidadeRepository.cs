@@ -22,15 +22,7 @@ namespace AppModelo.Model.Infra.Repositories
             var resultado = conexaoBd.Execute(sql);
             return resultado > 0;
         }
-        public bool Atualizar()
-        {
-            return false;
-        }
-        public bool Remover()
-        { 
-            return false;
-        }
-
+        
         public bool Remover(int id)
         {
             var sql = $"DELETE FROM nacionalidade WHERE id = '{id}'";

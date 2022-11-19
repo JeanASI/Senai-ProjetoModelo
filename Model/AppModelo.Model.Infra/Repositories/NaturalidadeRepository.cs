@@ -21,18 +21,17 @@ namespace AppModelo.Model.Infra.Repositories
             var resultado = conexaoBd.Execute(sql);
             return resultado > 0;
         }
-        public bool Atualizar()
-        {
-            return false;
-        }
-        public bool Remover()
-        {
-            return false;
-        }
 
+        public bool Remover(int id)
+        {
+            var sql = $"DELETE FROM naturalidade WHERE id = '{id}'";
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
+            var resultado = conexaoBd.Execute(sql);
+            return resultado > 0;
+        }
         public IEnumerable<NaturalidadeEntity> ObterTodos()
         {
-            var sql = "SELECT id, descricao FROM naturalidade ORDER BY descricao DESC";
+            var sql = "SELECT id, descricao FROM naturalidade";
 
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
 

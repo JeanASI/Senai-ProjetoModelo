@@ -31,5 +31,27 @@ namespace AppModelo.View.Windows.Cadastro
             MessageBox.Show("Inserido com sucesso!");
 
         }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            var listaNaturalidade = _naturalidadeController.ObterTodasNaturalidades();
+            gvNaturalidade.DataSource = listaNaturalidade;
+            MessageBox.Show("Atualizado com sucesso!");
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txtId.Text);
+            var deletou = _naturalidadeController.Deletar(id);
+            if (deletou)
+            {
+                MessageBox.Show("Naturalidade deletado com sucesso!", "Naturalidade deletada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                gvNaturalidade.DataSource = _naturalidadeController.ObterTodasNaturalidades();
+            }
+            else
+            {
+                MessageBox.Show("Ocorreu um erro ao deletar uma naturalidade", "Naturalidade não deletada", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

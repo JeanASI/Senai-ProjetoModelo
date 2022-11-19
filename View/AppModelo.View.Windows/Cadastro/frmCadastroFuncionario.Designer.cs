@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSalvarFuncionario = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSalvarFuncionario = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -75,7 +75,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Chocolate;
+            this.panel1.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -83,17 +83,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(726, 48);
             this.panel1.TabIndex = 0;
-            // 
-            // btnSalvarFuncionario
-            // 
-            this.btnSalvarFuncionario.BackColor = System.Drawing.Color.LightCoral;
-            this.btnSalvarFuncionario.Location = new System.Drawing.Point(250, 437);
-            this.btnSalvarFuncionario.Name = "btnSalvarFuncionario";
-            this.btnSalvarFuncionario.Size = new System.Drawing.Size(137, 39);
-            this.btnSalvarFuncionario.TabIndex = 2;
-            this.btnSalvarFuncionario.Text = "Salvar";
-            this.btnSalvarFuncionario.UseVisualStyleBackColor = false;
-            this.btnSalvarFuncionario.Click += new System.EventHandler(this.btnSalvarFuncionario_Click);
             // 
             // label1
             // 
@@ -105,6 +94,17 @@
             this.label1.Size = new System.Drawing.Size(312, 30);
             this.label1.TabIndex = 1;
             this.label1.Text = "CADASTRO DE FUNCIONÁRIOS";
+            // 
+            // btnSalvarFuncionario
+            // 
+            this.btnSalvarFuncionario.BackColor = System.Drawing.Color.LightCoral;
+            this.btnSalvarFuncionario.Location = new System.Drawing.Point(250, 437);
+            this.btnSalvarFuncionario.Name = "btnSalvarFuncionario";
+            this.btnSalvarFuncionario.Size = new System.Drawing.Size(137, 39);
+            this.btnSalvarFuncionario.TabIndex = 2;
+            this.btnSalvarFuncionario.Text = "Salvar";
+            this.btnSalvarFuncionario.UseVisualStyleBackColor = false;
+            this.btnSalvarFuncionario.Click += new System.EventHandler(this.btnSalvarFuncionario_Click);
             // 
             // label2
             // 

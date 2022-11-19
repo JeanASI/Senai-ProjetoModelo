@@ -35,5 +35,11 @@ namespace AppModelo.View.Windows
             var form = new frmNaturalidade();
             form.Show();
         }
+
+        private void exibirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form  = new frmExibirFuncionarios();
+            form.Show();
+        }
     }
 }
