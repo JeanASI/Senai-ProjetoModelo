@@ -16,6 +16,12 @@ namespace AppModelo.View.Windows.Cadastro
 
         private void btnSalvarNaturalidade_Click(object sender, EventArgs e)
         {
+            if (txtDescricao.Text == "")
+            {
+                MessageBox.Show("O campo descrição é obrigatório!");
+                txtDescricao.Focus();
+                return;
+            }
             var temNumero = Helpers.Componentes.ExisteNumeroNoTexto(txtDescricao.Text);
             if(temNumero)
             {
@@ -45,7 +51,11 @@ namespace AppModelo.View.Windows.Cadastro
             var deletou = _naturalidadeController.Deletar(id);
             if (deletou)
             {
+<<<<<<< HEAD
                 MessageBox.Show("Naturalidade deletado com sucesso!", "Naturalidade deletada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+=======
+                MessageBox.Show("Naturalidade deletada com sucesso!", "Naturalidade deletada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+>>>>>>> a3cb59095f2653f2c3140b5adfcf03e2c102b6e0
                 gvNaturalidade.DataSource = _naturalidadeController.ObterTodasNaturalidades();
             }
             else

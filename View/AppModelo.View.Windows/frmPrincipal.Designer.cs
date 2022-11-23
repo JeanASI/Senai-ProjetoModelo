@@ -36,13 +36,21 @@
             this.naturalidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+<<<<<<< HEAD
             this.exibirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+=======
+            this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+>>>>>>> a3cb59095f2653f2c3140b5adfcf03e2c102b6e0
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+<<<<<<< HEAD
             this.menuStrip1.BackColor = System.Drawing.Color.AliceBlue;
+=======
+            this.menuStrip1.BackColor = System.Drawing.Color.Gray;
+>>>>>>> a3cb59095f2653f2c3140b5adfcf03e2c102b6e0
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.funcionariosToolStripMenuItem,
             this.nacionalidadesToolStripMenuItem,
@@ -57,7 +65,11 @@
             // 
             this.funcionariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrosToolStripMenuItem,
+<<<<<<< HEAD
             this.exibirToolStripMenuItem});
+=======
+            this.excluirToolStripMenuItem});
+>>>>>>> a3cb59095f2653f2c3140b5adfcf03e2c102b6e0
             this.funcionariosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.funcionariosToolStripMenuItem.ForeColor = System.Drawing.Color.DimGray;
             this.funcionariosToolStripMenuItem.Name = "funcionariosToolStripMenuItem";
@@ -66,10 +78,16 @@
             // 
             // cadastrosToolStripMenuItem
             // 
+<<<<<<< HEAD
             this.cadastrosToolStripMenuItem.ForeColor = System.Drawing.Color.DimGray;
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(192, 24);
             this.cadastrosToolStripMenuItem.Text = "Cadastro/Excluir";
+=======
+            this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
+            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.cadastrosToolStripMenuItem.Text = "Cadastrar";
+>>>>>>> a3cb59095f2653f2c3140b5adfcf03e2c102b6e0
             this.cadastrosToolStripMenuItem.Click += new System.EventHandler(this.cadastrosToolStripMenuItem_Click);
             // 
             // nacionalidadesToolStripMenuItem
@@ -84,7 +102,10 @@
             // 
             // cadastrarToolStripMenuItem
             // 
+<<<<<<< HEAD
             this.cadastrarToolStripMenuItem.ForeColor = System.Drawing.Color.DimGray;
+=======
+>>>>>>> a3cb59095f2653f2c3140b5adfcf03e2c102b6e0
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
             this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(199, 24);
             this.cadastrarToolStripMenuItem.Text = "Cadastrar/Excluir";
@@ -110,7 +131,11 @@
             // 
             // panel1
             // 
+<<<<<<< HEAD
             this.panel1.BackColor = System.Drawing.Color.LightSlateGray;
+=======
+            this.panel1.BackColor = System.Drawing.Color.Gray;
+>>>>>>> a3cb59095f2653f2c3140b5adfcf03e2c102b6e0
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 28);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -118,6 +143,7 @@
             this.panel1.Size = new System.Drawing.Size(378, 42);
             this.panel1.TabIndex = 1;
             // 
+<<<<<<< HEAD
             // exibirToolStripMenuItem
             // 
             this.exibirToolStripMenuItem.ForeColor = System.Drawing.Color.DimGray;
@@ -125,13 +151,26 @@
             this.exibirToolStripMenuItem.Size = new System.Drawing.Size(192, 24);
             this.exibirToolStripMenuItem.Text = "Exibir";
             this.exibirToolStripMenuItem.Click += new System.EventHandler(this.exibirToolStripMenuItem_Click);
+=======
+            // excluirToolStripMenuItem
+            // 
+            this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
+            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.excluirToolStripMenuItem.Text = "Excluir";
+            this.excluirToolStripMenuItem.Click += new System.EventHandler(this.excluirToolStripMenuItem_Click);
+>>>>>>> a3cb59095f2653f2c3140b5adfcf03e2c102b6e0
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(378, 253);
+=======
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.ClientSize = new System.Drawing.Size(378, 245);
+>>>>>>> a3cb59095f2653f2c3140b5adfcf03e2c102b6e0
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -154,6 +193,10 @@
         private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem1;
         private System.Windows.Forms.Panel panel1;
+<<<<<<< HEAD
         private System.Windows.Forms.ToolStripMenuItem exibirToolStripMenuItem;
+=======
+        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
+>>>>>>> a3cb59095f2653f2c3140b5adfcf03e2c102b6e0
     }
 }

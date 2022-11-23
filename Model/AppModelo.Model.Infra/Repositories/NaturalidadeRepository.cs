@@ -21,6 +21,24 @@ namespace AppModelo.Model.Infra.Repositories
             var resultado = conexaoBd.Execute(sql);
             return resultado > 0;
         }
+<<<<<<< HEAD
+=======
+        public bool Atualizar()
+        {
+            return false;
+        }
+        public bool Remover()
+        {
+            return false;
+        }
+        public bool Remover(int id)
+        {
+            var sql = $"DELETE FROM naturalidade WHERE id = '{id}'";
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
+            var resultado = conexaoBd.Execute(sql);
+            return resultado > 0;
+        }
+>>>>>>> a3cb59095f2653f2c3140b5adfcf03e2c102b6e0
 
         public bool Remover(int id)
         {
