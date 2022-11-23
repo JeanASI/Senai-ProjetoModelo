@@ -16,11 +16,17 @@ namespace AppModelo.Controller.Cadastros
             var resposta = repositorio.Inserir(nome, dataAniversario, cpf, sexo, nacionalidade, naturalidade, email, telefone, telefone_contato, cep, logradouro, numero, complemento, bairro, municipio, uf);
             return resposta;
         }
-        public List<FuncionarioEntity> ObterTodasNaturalidades()
+        public List<FuncionarioEntity> ObterTodosFuncionarios()
         {
             var repositorio = new FuncionarioRepository();
             var resposta = repositorio.ObterTodos();
             return (List<FuncionarioEntity>)resposta;
+        }
+        public bool Deletar(int id)
+        {
+            var repositorio = new FuncionarioRepository();
+            var resposta = repositorio.Remover(id);
+            return resposta;
         }
     }
 }

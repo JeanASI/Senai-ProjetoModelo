@@ -4,9 +4,6 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppModelo.Model.Infra.Repositories
 {
@@ -20,6 +17,13 @@ namespace AppModelo.Model.Infra.Repositories
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
             var resultado = conexaoBd.Execute(sql);
 
+            return resultado > 0;
+        }
+        public bool Remover(int id)
+        {
+            var sql = $"DELETE FROM funcionarios WHERE id = '{id}'";
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
+            var resultado = conexaoBd.Execute(sql);
             return resultado > 0;
         }
         public IEnumerable<FuncionarioEntity> ObterTodos()
