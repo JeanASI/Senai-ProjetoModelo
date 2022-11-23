@@ -35,7 +35,7 @@ namespace AppModelo.Controller.Cadastros
         public List<FuncionarioEntity> ObterTodasFuncionarios()
         {
             var repositorio = new FuncionarioRepository();
-            var resposta = repositorio.ObterTodosFuncionarios();
+            var resposta = repositorio.ObterTodasFuncionarios();
             return (List<FuncionarioEntity>)resposta;
         }
     }
