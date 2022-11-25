@@ -85,11 +85,8 @@
     </Compile>
     <Compile Include="Helpers\ExisteNumeroNoTexto.cs" />
     <Compile Include="Helpers\FormatarCamposObrigatorios.cs" />
-    <Compile Include="Helpers\frmExcluirFuncionario.cs">
+    <Compile Include="Cadastro\frmExcluirFuncionario.cs">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Helpers\frmExcluirFuncionario.Designer.cs">
-      <DependentUpon>frmExcluirFuncionario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
