@@ -39,7 +39,7 @@ namespace AppModelo.View.Windows
 
         private void excluirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var form = new frmExcluirFuncionario();
+            var form = new frmExibirFuncionarios();
             form.Show();
         }
     }

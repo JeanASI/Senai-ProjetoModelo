@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSalvarFuncionario = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSalvarFuncionario = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -81,19 +81,8 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(726, 48);
+            this.panel1.Size = new System.Drawing.Size(990, 48);
             this.panel1.TabIndex = 0;
-            // 
-            // btnSalvarFuncionario
-            // 
-            this.btnSalvarFuncionario.BackColor = System.Drawing.Color.LightCoral;
-            this.btnSalvarFuncionario.Location = new System.Drawing.Point(250, 437);
-            this.btnSalvarFuncionario.Name = "btnSalvarFuncionario";
-            this.btnSalvarFuncionario.Size = new System.Drawing.Size(137, 39);
-            this.btnSalvarFuncionario.TabIndex = 2;
-            this.btnSalvarFuncionario.Text = "Salvar";
-            this.btnSalvarFuncionario.UseVisualStyleBackColor = false;
-            this.btnSalvarFuncionario.Click += new System.EventHandler(this.btnSalvarFuncionario_Click);
             // 
             // label1
             // 
@@ -105,6 +94,17 @@
             this.label1.Size = new System.Drawing.Size(312, 30);
             this.label1.TabIndex = 1;
             this.label1.Text = "CADASTRO DE FUNCIONÁRIOS";
+            // 
+            // btnSalvarFuncionario
+            // 
+            this.btnSalvarFuncionario.BackColor = System.Drawing.Color.LightCoral;
+            this.btnSalvarFuncionario.Location = new System.Drawing.Point(250, 437);
+            this.btnSalvarFuncionario.Name = "btnSalvarFuncionario";
+            this.btnSalvarFuncionario.Size = new System.Drawing.Size(137, 39);
+            this.btnSalvarFuncionario.TabIndex = 2;
+            this.btnSalvarFuncionario.Text = "Salvar";
+            this.btnSalvarFuncionario.UseVisualStyleBackColor = false;
+            this.btnSalvarFuncionario.Click += new System.EventHandler(this.btnSalvarFuncionario_Click);
             // 
             // label2
             // 
@@ -436,7 +436,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(726, 488);
+            this.ClientSize = new System.Drawing.Size(990, 488);
             this.Controls.Add(this.btnSalvarFuncionario);
             this.Controls.Add(this.cmbNaturalidade);
             this.Controls.Add(this.cmbNacionalidade);
