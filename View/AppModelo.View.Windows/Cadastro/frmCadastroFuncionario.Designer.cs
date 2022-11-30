@@ -69,19 +69,21 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Chocolate;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(990, 48);
+            this.panel1.Size = new System.Drawing.Size(718, 48);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -98,9 +100,10 @@
             // btnSalvarFuncionario
             // 
             this.btnSalvarFuncionario.BackColor = System.Drawing.Color.LightCoral;
-            this.btnSalvarFuncionario.Location = new System.Drawing.Point(250, 437);
+            this.btnSalvarFuncionario.Font = new System.Drawing.Font("Yu Gothic UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvarFuncionario.Location = new System.Drawing.Point(578, 383);
             this.btnSalvarFuncionario.Name = "btnSalvarFuncionario";
-            this.btnSalvarFuncionario.Size = new System.Drawing.Size(137, 39);
+            this.btnSalvarFuncionario.Size = new System.Drawing.Size(126, 30);
             this.btnSalvarFuncionario.TabIndex = 2;
             this.btnSalvarFuncionario.Text = "Salvar";
             this.btnSalvarFuncionario.UseVisualStyleBackColor = false;
@@ -328,7 +331,7 @@
             // rbMasculino
             // 
             this.rbMasculino.AutoSize = true;
-            this.rbMasculino.Location = new System.Drawing.Point(578, 72);
+            this.rbMasculino.Location = new System.Drawing.Point(578, 76);
             this.rbMasculino.Name = "rbMasculino";
             this.rbMasculino.Size = new System.Drawing.Size(94, 24);
             this.rbMasculino.TabIndex = 4;
@@ -384,12 +387,13 @@
             // 
             // btnPesquisarCep
             // 
+            this.btnPesquisarCep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnPesquisarCep.Location = new System.Drawing.Point(152, 258);
             this.btnPesquisarCep.Name = "btnPesquisarCep";
             this.btnPesquisarCep.Size = new System.Drawing.Size(75, 27);
             this.btnPesquisarCep.TabIndex = 5;
             this.btnPesquisarCep.Text = "Pesquisar";
-            this.btnPesquisarCep.UseVisualStyleBackColor = true;
+            this.btnPesquisarCep.UseVisualStyleBackColor = false;
             this.btnPesquisarCep.Click += new System.EventHandler(this.btnPesquisarCep_Click);
             // 
             // cmbNacionalidade
@@ -431,12 +435,21 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(631, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 40);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // frmCadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(990, 488);
+            this.BackColor = System.Drawing.Color.Gray;
+            this.ClientSize = new System.Drawing.Size(718, 440);
             this.Controls.Add(this.btnSalvarFuncionario);
             this.Controls.Add(this.cmbNaturalidade);
             this.Controls.Add(this.cmbNacionalidade);
@@ -529,5 +542,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.Button btnSalvarFuncionario;
+        private System.Windows.Forms.Button button1;
     }
 }

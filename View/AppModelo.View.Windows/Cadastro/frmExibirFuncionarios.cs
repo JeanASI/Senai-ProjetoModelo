@@ -21,25 +21,34 @@ namespace AppModelo.View.Windows.Cadastro
             gvExibirFuncionarios.DataSource = listaDeFuncionarios;
         }
 
+        /// <summary>
+        /// Evento associado ao botao atualizar que tras as informações da lista instanciada no controlador.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
             var listaNacionalidade = _FuncionarioController.ObterFuncionarios();
             gvExibirFuncionarios.DataSource = listaNacionalidade;
             MessageBox.Show("Atualizado com sucesso!");
         }
-
+        /// <summary>
+        /// Evento associado ao botao excluir funcionarios solicita ao controlador que delete o funcionario selecionado no formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             int id = int.Parse(txtIdFuncionarios.Text);
             var deletou = _FuncionarioController.Deletar(id);
             if (deletou)
             {
-                MessageBox.Show("Nacionalidade deletado com sucesso!", "Nacionalidade deletada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Funcionario deletado com sucesso!", "Funcionario deletada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 gvExibirFuncionarios.DataSource = _FuncionarioController.ObterFuncionarios();
             }
             else
             {
-                MessageBox.Show("Ocorreu um erro ao deletar uma nacionalidade", "Nacionalidade não deletada", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocorreu um erro ao deletar uma funcionario", "Funcionario não deletada", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

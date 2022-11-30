@@ -97,15 +97,40 @@ namespace AppModelo.View.Windows.Cadastro
             if ((bool)salvou)
             {
                 MessageBox.Show("Cadastrado com sucesso");
-                
 
-                
+
+
             }
             else
             {
                 MessageBox.Show("Erro ao cadastrar usuário");
             }
+            LimpaForm();
+
         }
+        private void LimpaForm()
+        {
+            foreach (Control controle in this.Controls)
+            {
+                switch (controle)
+                {
+                    case TextBox:
+                        ((TextBox)controle).Clear();
+                        break;
+
+                    case MaskedTextBox:
+                        ((MaskedTextBox)controle).Text = "";
+                        break;
+
+                    case ComboBox:
+                        ((ComboBox)controle).SelectedIndex = 0;
+                        break;
+                }
+            }
+
+
+        }
+
     }
 }
 
