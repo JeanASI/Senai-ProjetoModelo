@@ -62,5 +62,10 @@ namespace AppModelo.View.Windows
             form.MdiParent = this;
             form.Show();
         }
+
+        private void tsmFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

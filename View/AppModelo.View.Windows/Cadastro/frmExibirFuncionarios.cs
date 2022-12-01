@@ -51,5 +51,10 @@ namespace AppModelo.View.Windows.Cadastro
                 MessageBox.Show("Ocorreu um erro ao deletar uma funcionario", "Funcionario não deletada", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

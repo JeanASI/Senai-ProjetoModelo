@@ -40,6 +40,7 @@
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnSair = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvNacionalidades)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -78,7 +79,7 @@
             // 
             this.txtDescricao.Location = new System.Drawing.Point(12, 87);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(156, 20);
+            this.txtDescricao.Size = new System.Drawing.Size(174, 20);
             this.txtDescricao.TabIndex = 1;
             // 
             // gvNacionalidades
@@ -86,14 +87,14 @@
             this.gvNacionalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvNacionalidades.Location = new System.Drawing.Point(12, 149);
             this.gvNacionalidades.Name = "gvNacionalidades";
-            this.gvNacionalidades.Size = new System.Drawing.Size(464, 150);
+            this.gvNacionalidades.Size = new System.Drawing.Size(504, 150);
             this.gvNacionalidades.TabIndex = 2;
             // 
             // btnSalvar
             // 
             this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(170, 86);
+            this.btnSalvar.Location = new System.Drawing.Point(192, 86);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 3;
@@ -104,6 +105,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.Controls.Add(this.btnSair);
             this.panel1.Controls.Add(this.btnExcluir);
             this.panel1.Controls.Add(this.chkAtivo);
             this.panel1.Controls.Add(this.btnAtualizar);
@@ -115,14 +117,14 @@
             this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(494, 126);
+            this.panel1.Size = new System.Drawing.Size(532, 126);
             this.panel1.TabIndex = 4;
             // 
             // btnExcluir
             // 
             this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Location = new System.Drawing.Point(336, 87);
+            this.btnExcluir.Location = new System.Drawing.Point(358, 87);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 23);
             this.btnExcluir.TabIndex = 5;
@@ -147,7 +149,7 @@
             // 
             this.btnAtualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizar.Location = new System.Drawing.Point(255, 86);
+            this.btnAtualizar.Location = new System.Drawing.Point(277, 86);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(75, 23);
             this.btnAtualizar.TabIndex = 3;
@@ -159,14 +161,27 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Location = new System.Drawing.Point(439, 88);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(75, 23);
+            this.btnSair.TabIndex = 6;
+            this.btnSair.Text = "&Sair";
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // frmNacionalidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(492, 320);
+            this.ClientSize = new System.Drawing.Size(528, 320);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gvNacionalidades);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmNacionalidades";
             this.Text = "frmNacionalidades";
             ((System.ComponentModel.ISupportInitialize)(this.gvNacionalidades)).EndInit();
@@ -190,5 +205,6 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.CheckBox chkAtivo;
         private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnSair;
     }
 }
