@@ -18,7 +18,11 @@ namespace AppModelo.View.Windows
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Botao entrar do formulario de login
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             var emailEhValido = Validadores.EmailEValido(txtEmail.Text);
@@ -42,7 +46,11 @@ namespace AppModelo.View.Windows
                 MessageBox.Show("Usuario ou senha não encontrado");
             }
         }
-
+        /// <summary>
+        /// Label responsavel por chamar o formulario recuperar senha
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lblEsqueciMinhaSenha_Click(object sender, EventArgs e)
         {
             var form = new frmRecuperarSenha();

@@ -30,11 +30,11 @@
         {
             this.gvExibirFuncionarios = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSair = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.txtIdFuncionarios = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSair = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvExibirFuncionarios)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -57,8 +57,21 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(627, 65);
+            this.panel1.Size = new System.Drawing.Size(623, 65);
             this.panel1.TabIndex = 1;
+            // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.Transparent;
+            this.btnSair.BackgroundImage = global::AppModelo.View.Windows.Properties.Resources.png_transparent_button_computer_icons_window_scalable_graphics_browse_and_close_button_s_miscellaneous_angle_text;
+            this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Location = new System.Drawing.Point(567, 2);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(50, 25);
+            this.btnSair.TabIndex = 3;
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnAtualizar
             // 
@@ -102,18 +115,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Id";
             // 
-            // btnSair
-            // 
-            this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(323, 25);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(86, 28);
-            this.btnSair.TabIndex = 3;
-            this.btnSair.Text = "&Sair";
-            this.btnSair.UseVisualStyleBackColor = false;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
             // frmExibirFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -124,6 +125,7 @@
             this.Controls.Add(this.gvExibirFuncionarios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmExibirFuncionarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmExibirFuncionarios";
             ((System.ComponentModel.ISupportInitialize)(this.gvExibirFuncionarios)).EndInit();
             this.panel1.ResumeLayout(false);

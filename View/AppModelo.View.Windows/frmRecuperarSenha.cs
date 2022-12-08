@@ -18,7 +18,11 @@ namespace AppModelo.View.Windows
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Botao
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnRecuperarAcesso_Click(object sender, EventArgs e)
         {
             var emailEhValido = Validadores.EmailEValido(txtEmailRecuperarSenha.Text);
@@ -32,7 +36,11 @@ namespace AppModelo.View.Windows
             var resultado = controller.RecuperarSenha(txtEmailRecuperarSenha.Text);
             MessageBox.Show(resultado);
         }
-
+        /// <summary>
+        /// Botao responsavel por fechar o formulario recuperar senha
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();

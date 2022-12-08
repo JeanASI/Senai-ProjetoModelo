@@ -157,5 +157,32 @@
   <ItemGroup>
     <None Include="Resources\13545019211339%281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\135450192113392.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1354501921133921.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1354501921133922.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-button-computer-icons-window-scalable-graphics-browse-and-close-button-s-miscellaneous-angle-text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

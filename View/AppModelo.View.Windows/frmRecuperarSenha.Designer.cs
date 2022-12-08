@@ -91,7 +91,9 @@
             this.Controls.Add(this.txtEmailRecuperarSenha);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnRecuperarAcesso);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRecuperarSenha";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRecuperarSenha";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);

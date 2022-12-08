@@ -62,8 +62,12 @@ namespace AppModelo.View.Windows
             form.MdiParent = this;
             form.Show();
         }
-
-        private void tsmFechar_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Botao que fecha o formulario 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tsmFechar_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
